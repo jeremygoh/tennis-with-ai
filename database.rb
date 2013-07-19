@@ -1,6 +1,6 @@
 require 'data_mapper'
 
-DataMapper::setup(:default, "sqlite3:///#{Dir.pwd}/shots.db")
+DataMapper::setup(:default, "postgres://localhost/tennisrps")
 
 class Shot
   include DataMapper::Resource
