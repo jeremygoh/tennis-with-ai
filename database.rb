@@ -5,7 +5,7 @@ require "dm-postgres-adapter"
 DataMapper::setup(:default, 
   :adapter  => 'postgres',
   :host     => 'localhost',
-  :database => 'tennisrps',)
+  :database => 'tennis-rps-app',)
 
 class Shot
   include DataMapper::Resource
