@@ -1,3 +1,5 @@
+
+
 //scoring system js
 var start = document.getElementById('start');
         start.addEventListener('click',function(){
@@ -23,6 +25,10 @@ function capitaliseFirstLetter(string)
   {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
+
+    // //capitalize all existing entries in the database
+    // $('.log').text = $('.log').each(capitaliseFirstLetter);
+
 
   function computerChoiceUpdater(response){
     $("#computer-choice").text(capitaliseFirstLetter(response.computer_choice));

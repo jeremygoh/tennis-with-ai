@@ -44,7 +44,26 @@
    </tr>   
 </table>
 
+<tabLe id="shot-history">
+  <tr>
+    <th>ID</th>
+    <th>Player 1 Shot</th>
+    <th>Player 2 Shot</th>
+    <th>Rally Winner</th>
+  </tr>
+  
+  <% @shots.each do |shot| %>
 
+      <tr>
+        <td><%= shot.id %></td>
+        <td class="log"><%= shot.player1_shot.capitalize %></td>
+        <td class="log"><%= shot.player2_shot.capitalize %></td>
+        <td class="log"><%= shot.rally_winner.capitalize %></td>
+      </tr>
+
+  <% end %>
+
+</table>
 
     <script src="/javascript/player.js"></script>
     <script src="/javascript/game.js"></script>
