@@ -1,4 +1,6 @@
 require 'data_mapper'
+require 'pg'
+require "dm-postgres-adapter"
 
 DataMapper::setup(:default, 
   :adapter  => 'postgres',
