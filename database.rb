@@ -3,7 +3,7 @@ require 'pg'
 require "dm-postgres-adapter"
 
 DataMapper::setup(:default, 
-  :adapter  => 'postgresql',
+  :adapter  => 'postgres',
   :host     => 'localhost',
   :database => 'tennis-rps-app',)
 
