@@ -4,7 +4,6 @@ require 'json'
 require './database'
 
 get '/' do
-@shots = Shot.all
 erb :index
 
 end
@@ -19,5 +18,19 @@ post '/selection' do
 #take what has been sent by JS, and return some json
 end
 
+get '/shots' do
+content_type :json
+(params[:amount] == "all") ? @shots = Shot.all : @shots = Shot.last
 
-#get from database so no need reload??
+return @shots.to_json
+
+end
+
+
+
+
+
+
+
+     
+     

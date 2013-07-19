@@ -44,7 +44,7 @@
    </tr>   
 </table>
 
-<tabLe id="shot-history">
+<table id="shot-history">
   <tr>
     <th>ID</th>
     <th>Player 1 Shot</th>
@@ -52,20 +52,34 @@
     <th>Rally Winner</th>
   </tr>
   
-  <% @shots.each do |shot| %>
-
-      <tr>
-        <td><%= shot.id %></td>
-        <td class="log"><%= shot.player1_shot.capitalize %></td>
-        <td class="log"><%= shot.player2_shot.capitalize %></td>
-        <td class="log"><%= shot.rally_winner.capitalize %></td>
-      </tr>
-
-  <% end %>
 
 </table>
+
+<div id="logs">
+</div>
 
     <script src="/javascript/player.js"></script>
     <script src="/javascript/game.js"></script>
     <script src="app.js"></script>
+        <script>
+      logStart = function(response){
+                      $("#shot-history tr:last").after(function(){
+                        output =""
+                        $(response).each(function(){
+                            output += "<tr><td>" + this.id.toString() + "</td><td>" + capitaliseFirstLetter(this.player1_shot) + "</td><td>" + capitaliseFirstLetter(this.player2_shot) + "</td><td>" + capitaliseFirstLetter(this.rally_winner) + "</td></tr>";
+                        }) //end of each
+                        return output;
+                      })  //end of after
+                };
+
+  //get json object for all shots at the start and update table
+  logInitializer = function(){
+    $.get("/shots", {amount: "all"}, logStart);
+  }
+
+  logInitializer();
+
+    </script>
+
+
  

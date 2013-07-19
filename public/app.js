@@ -18,6 +18,22 @@ var special = document.getElementById('special-point');
 
 
 
+//shot history
+  //function which replaces html element called logs with response
+  logReplacer = function(response){
+                 $("#shot-history tr:last").after(function(){
+                   return "<tr><td>" + (response.id).toString() + "</td><td>" + 
+                   capitaliseFirstLetter(response.player1_shot) + "</td><td>" + capitaliseFirstLetter(response.player2_shot) + 
+                   "</td><td>" + capitaliseFirstLetter(response.rally_winner) + "</td></tr>";
+                 })
+
+                };
+                 
+  //get json object
+  logUpdater = function(){ $.get("/shots", logReplacer);};
+
+  //function which enters all shots in the table at the beginning
+
 
 //
 
@@ -25,9 +41,6 @@ function capitaliseFirstLetter(string)
   {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
-
-    // //capitalize all existing entries in the database
-    // $('.log').text = $('.log').each(capitaliseFirstLetter);
 
 
   function computerChoiceUpdater(response){
@@ -81,11 +94,11 @@ function capitaliseFirstLetter(string)
 
 
     function updater(response){
-          console.log(response);
           winnerUpdater(response);
           userChoiceUpdater(shot);  //shot is a variable stored on the local system
           computerChoiceUpdater(response);
           scoreUpdater(response);
+          logUpdater();
     }
 
     function forehand() {
@@ -109,4 +122,7 @@ function capitaliseFirstLetter(string)
 
 
 
-//
+
+
+
+
