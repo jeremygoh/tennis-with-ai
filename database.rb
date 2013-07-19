@@ -2,10 +2,8 @@ require 'data_mapper'
 require 'pg'
 require "dm-postgres-adapter"
 
-DataMapper::setup(:default, 
-  :adapter  => 'postgres',
-  :host     => 'localhost',
-  :database => 'tennis-rps-app',)
+# DataMapper::setup(:default, 'postgres://localhost/tennis-rps-app')
+DataMapper::setup(:default,ENV["HEROKU_POSTGRESQL_PINK_URL"])
 
 class Shot
   include DataMapper::Resource
