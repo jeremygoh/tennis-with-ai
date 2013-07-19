@@ -1,3 +1,4 @@
-require 'sinatra'
-require 'data_mapper'
-require 'json'
+source "http://rubygems.org"
+gem 'sinatra'
+gem 'data_mapper'
+gem 'json'
