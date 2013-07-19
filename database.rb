@@ -1,6 +1,9 @@
 require 'data_mapper'
 
-DataMapper::setup(:default, "postgres://localhost/tennisrps")
+DataMapper::setup(:default, 
+  :adapter  => 'postgres',
+  :host     => 'localhost',
+  :database => 'tennisrps',)
 
 class Shot
   include DataMapper::Resource
