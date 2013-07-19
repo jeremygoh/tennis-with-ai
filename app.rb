@@ -1,4 +1,4 @@
-require 'sinatra-base'
+require 'sinatra/base'
 require './result.rb'
 require 'json'
 require './database'
