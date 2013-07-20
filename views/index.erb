@@ -4,22 +4,27 @@
     <button form="selection-form" name="pick" value="backhand">Backhand</button>
     <button form="selection-form" name="pick" value="backhand">Drop Shot</button>          
 </form> -->
-
-    <h1 id="user-choice"></h1>
+  <div id="headlines">
+    <h1 id="user-choice">Warming Up...</h1>
     <h1 id="versus">VS</h1>
-    <h1 id="computer-choice"></h1>
+    <h1 id="computer-choice">Warming Up...</h1>
     <h1 id="result"></h1>
+</div>
 
+<div id="action-buttons">
+   <button class="btn btn-success" id="start" type="button">Start</button><br />
     <button id="forehand">Forehand</button>
     <button id="backhand">Backhand</button>
     <button id="dropshot">Drop Shot</button>  
+</div>
 
     <div id="special-point-container">
       <h1 id="special-point"></h1>
     </div>
 
 
-<button class="btn btn-success" id="start" type="button">Start</button>
+
+
 
 <table id="score-table">
    <tr>
@@ -47,9 +52,9 @@
 <table id="shot-history">
   <tr>
     <th>ID</th>
-    <th>Player 1 Shot</th>
-    <th>Player 2 Shot</th>
-    <th>Rally Winner</th>
+    <th>Player 1</th>
+    <th>Player 2</th>
+    <th>Winner</th>
   </tr>
   
 
@@ -66,7 +71,7 @@
                       $("#shot-history tr:last").after(function(){
                         output =""
                         $(response).each(function(){
-                            output += "<tr><td>" + this.id.toString() + "</td><td>" + capitaliseFirstLetter(this.player1_shot) + "</td><td>" + capitaliseFirstLetter(this.player2_shot) + "</td><td>" + capitaliseFirstLetter(this.rally_winner) + "</td></tr>";
+                            output += "<tr class='entry'><td>" + this.id.toString() + "</td><td>" + capitaliseFirstLetter(this.player1_shot) + "</td><td>" + capitaliseFirstLetter(this.player2_shot) + "</td><td>" + capitaliseFirstLetter(this.rally_winner) + "</td></tr>";
                         }) //end of each
                         return output;
                       })  //end of after
@@ -80,6 +85,8 @@
   logInitializer();
 
     </script>
+
+    <script src ="/javascript/loading.js"></script>
 
 
  

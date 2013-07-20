@@ -22,7 +22,7 @@ var special = document.getElementById('special-point');
   //function which replaces html element called logs with response
   logReplacer = function(response){
                  $("#shot-history tr:last").after(function(){
-                   return "<tr><td>" + (response.id).toString() + "</td><td>" + 
+                   return "<tr class='entry'><td>" + (response.id).toString() + "</td><td>" + 
                    capitaliseFirstLetter(response.player1_shot) + "</td><td>" + capitaliseFirstLetter(response.player2_shot) + 
                    "</td><td>" + capitaliseFirstLetter(response.rally_winner) + "</td></tr>";
                  })

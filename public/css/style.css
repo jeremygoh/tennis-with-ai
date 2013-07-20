@@ -1,0 +1,90 @@
+html { 
+  background: url('/images/tennis.jpg') no-repeat center center fixed; 
+  background-size: cover;
+}
+
+@font-face{
+  font-family: scoreboard;
+  src: url('/font/scoreboard.ttf') ;
+}
+
+#score-table {
+  font-family: scoreboard;
+  color: yellow;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.entry{
+ 
+}
+
+#shot-history{
+
+  text-align: center;
+  font-family: scoreboard;
+  color: yellow;
+  margin: 0 auto;
+    margin-top: 50px;
+}
+
+#container{
+    width: 600px;
+    margin: 0px auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#headlines{
+  color:white;
+  font-family: scoreboard;
+}
+
+#user-choice, #computer-choice, #result{
+  min-width: 100px;
+  min-height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 30px;
+}
+
+#result{
+  margin-left: 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+
+#user-choice{
+  margin-top: 50px;
+}
+
+#user-choice{
+  position: relative;
+  top: 30px
+}
+
+#computer-choice{
+  margin-top: 35px
+}
+
+#versus{
+  text-align: center;
+  margin-top: 35px;
+  height: 10px;
+}
+
+
+td{
+  padding: 5px 25px;
+}
+
+#action-buttons{
+  margin: 0 auto;
+  width: 350px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.btn-success{
+  margin-bottom: 10px;
+}
