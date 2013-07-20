@@ -50,8 +50,12 @@ html {
 #result{
   margin-left: 10px;
   margin: 0 auto;
-  margin-bottom: 20px;
-}
+  margin-bottom: 10px;
+  margin-top: -10px;
+  padding-top: -3px;
+  padding-bottom: -10px;
+  padding-left: 3px;
+ }
 
 
 #user-choice{
@@ -82,7 +86,7 @@ td{
   margin: 0 auto;
   width: 350px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .btn-success{
