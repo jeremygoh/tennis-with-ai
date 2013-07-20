@@ -78,9 +78,11 @@ html {
 }
 
 
-td th{
+td, th{
   padding: 5px 25px;
 }
+
+
 
 #action-buttons{
   margin: 0 auto;
